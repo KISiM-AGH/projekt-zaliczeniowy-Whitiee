@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="pane" prefHeight="610.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aplikacja.kontrolerRozrostZiaren">
+  <children>
+    <ScrollPane fx:id="scrollPane" hmax="400.0" layoutX="14.0" layoutY="18.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="600.0" vmax="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <content>
+        <AnchorPane minHeight="1000.0" minWidth="1000.0" prefHeight="1000.0" prefWidth="1000.0">
+          <children>
+            <Canvas id="canvas1D" fx:id="canvas2D" height="1000.0" layoutX="-6.0" onMouseClicked="#dodajZiarnoDoCanvas" width="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+          </children>
+        </AnchorPane>
+      </content>
+    </ScrollPane>
+      <Button fx:id="ustawButton" mnemonicParsing="false" onAction="#ustaw" prefHeight="25.0" prefWidth="170.0" text="Ustaw" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="218.0" />
+      <Button fx:id="graniceButton" mnemonicParsing="false" onAction="#pokazGranice" prefHeight="25.0" prefWidth="170.0" text="Granice ziaren" textFill="#b500ff" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="510.0" />
+      <TextField fx:id="ktField" prefHeight="25.0" prefWidth="170.0" promptText="2" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="435.0" />
+      <TextField fx:id="yField" prefHeight="25.0" prefWidth="170.0" promptText="580" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="187.0" />
+      <TextField fx:id="krokiField" prefHeight="25.0" prefWidth="170.0" promptText="50" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="480.0" />
+      <Label text="Wartość stałej kt &lt;0.1 ; 6&gt;" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="418.0" />
+      <TextField prefHeight="25.0" prefWidth="170.0" promptText="580" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="157.0" fx:id="xField" />
+    <Button fx:id="startButton" layoutX="620.0" layoutY="511.0" mnemonicParsing="false" onAction="#start" prefHeight="25.0" prefWidth="170.0" text="START" textFill="#7a00ff" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="540.0" />
+    <Button fx:id="stopButton" layoutX="620.0" layoutY="546.0" mnemonicParsing="false" onAction="#stop" prefHeight="25.0" prefWidth="170.0" text="STOP" textFill="#2600ff" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="570.0" />
+    <TextField fx:id="liczbaZiarenField" layoutX="620.0" layoutY="310.0" prefHeight="25.0" prefWidth="170.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="267.0" />
+    <Label layoutX="621.0" layoutY="287.0" text="Liczba ziaren" AnchorPane.rightAnchor="112.0" AnchorPane.topAnchor="250.0" />
+    <Label layoutX="619.0" layoutY="70.0" text="Typ sąsiedztwa" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="50.0" />
+    <ChoiceBox fx:id="choiceBoxTypSąsiedztwa" layoutX="679.0" layoutY="98.0" prefHeight="25.0" prefWidth="170.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="67.0" />
+      <Label text="Liczba kroków symulacji" AnchorPane.rightAnchor="53.0" AnchorPane.topAnchor="463.0" />
+    <Label layoutX="679.0" layoutY="14.0" text="Warunki brzegowe" AnchorPane.rightAnchor="78.0" AnchorPane.topAnchor="5.0" />
+    <ChoiceBox fx:id="choiceBoxWarunkiBrzegowe" layoutX="685.0" layoutY="37.0" prefHeight="25.0" prefWidth="170.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="22.0" />
+    <Button fx:id="wypełnijButton" layoutX="620.0" layoutY="400.0" mnemonicParsing="false" onAction="#wypełnijCanvas" prefHeight="25.0" prefWidth="170.0" text="Wypełnij" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="345.0" />
+    <Button fx:id="resetButton" layoutX="620.0" layoutY="430.0" mnemonicParsing="false" onAction="#reset" prefHeight="25.0" prefWidth="170.0" text="Reset" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="375.0" />
+    <Label layoutX="623.0" layoutY="207.0" prefHeight="17.0" prefWidth="170.0" text="Wymiary okna" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="140.0" />
+    <ChoiceBox fx:id="choiceBoxZarodkowanie" layoutX="620.0" layoutY="262.0" prefHeight="25.0" prefWidth="170.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="112.0" />
+    <TextField fx:id="odleglośćPromieńField" layoutX="620.0" layoutY="365.0" prefHeight="25.0" prefWidth="170.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="312.0" />
+    <Label layoutX="619.0" layoutY="238.0" text="Zarodkowanie" AnchorPane.rightAnchor="103.0" AnchorPane.topAnchor="95.0" />
+    <Label layoutX="620.0" layoutY="337.0" text="Odległość / promień" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="295.0" />
+  </children>
+</AnchorPane>
